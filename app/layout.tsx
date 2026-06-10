@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CodePulse | Domina el código, 5 minutos a la vez",
+  title: "NanoCode | Domina el código, 5 minutos a la vez",
   description: "Aprende JavaScript con lecciones interactivas.",
 };
 

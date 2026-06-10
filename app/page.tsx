@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
+import { useRouter } from "next/navigation";
 
 export default function HomePage() {
   // Estado para controlar la animación secuencial de las líneas de la terminal simulada
   const [visibleLines, setVisibleLines] = useState<number>(0);
-
+const router = useRouter();
   useEffect(() => {
     const linesCount = 8; // Número total de líneas incluyendo el Output
     const intervals = Array.from({ length: linesCount }).map((_, index) =>
@@ -22,11 +23,11 @@ export default function HomePage() {
     <>
       {/* TopNavBar */}
       <Header>
-        <button className="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold hover:opacity-80 transition-all active:scale-95 neon-glow-primary font-sora">
+        <button  onClick={() => router.push('./register')} className="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold hover:opacity-80 transition-all active:scale-95 neon-glow-primary font-sora">
           Empezar gratis
         </button>
       </Header>
-
+  
       <main>
         {/* Hero Section */}
         <section className="relative overflow-hidden pt-16 pb-24 md:pt-32 md:pb-40">
@@ -52,7 +53,7 @@ export default function HomePage() {
               Aprende JavaScript con lecciones interactivas diseñadas para tu ritmo de vida. Transforma tus ratos libres en una carrera tecnológica.
             </p>
             <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-              <button className="w-full md:w-auto bg-primary-container text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all neon-glow-primary font-sora">
+              <button onClick={() => router.push('./register')} className="w-full md:w-auto bg-primary-container text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all neon-glow-primary font-sora">
                 Empieza a programar gratis
               </button>
             </div>
