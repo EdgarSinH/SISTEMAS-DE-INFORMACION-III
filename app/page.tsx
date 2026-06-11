@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import { useRouter } from "next/navigation";
+import LessonArea from "./components/LessonArea";
 
 export default function HomePage() {
   // Estado para controlar la animación secuencial de las líneas de la terminal simulada
@@ -59,7 +60,7 @@ const router = useRouter();
             </div>
           </div>
         </section>
-
+  <LessonArea videoSrc="https://www.youtube.com/embed/asRuv6m_XFc" />
         {/* Value Section */}
         <section className="py-16 bg-surface-container-lowest">
           <div className="max-w-[1200px] mx-auto px-5 md:px-8">
